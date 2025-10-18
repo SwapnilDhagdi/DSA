@@ -1,3 +1,4 @@
+/* the approach is to make 2 stack one to store all the numbers and another to store minimum numbers only or numbers which are equall to minimum or top number*/
 class MinStack {
     Stack<Integer> stack;
     Stack<Integer> minStack;
@@ -16,7 +17,7 @@ class MinStack {
     }
     
     public void pop() {
-        if(stack.peek().equals( minStack.peek())){
+        if(stack.peek().equals( minStack.peek())){//you should only pop the minStack of it matches the stack
             minStack.pop();
         }
         stack.pop();
